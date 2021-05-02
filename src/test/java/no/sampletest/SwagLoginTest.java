@@ -25,7 +25,7 @@ public class SwagLoginTest {
 
 	@Test
 	public void testLoginFailed() {
-		System.out.println("######## TestCase1 #######");
+		System.out.println("######## Test Case1 #######");
 		driver.get("https://www.saucedemo.com/");
 		WebElement username = driver.findElement(By.id("user-name"));
 		WebElement password = driver.findElement(By.id("password"));
@@ -48,7 +48,7 @@ public class SwagLoginTest {
 
 	@Test
 	public void testLoginSuccess() {
-		System.out.println("######## TestCase2 #######");
+		System.out.println("######## Test Case2 #######");
 		driver.get("https://www.saucedemo.com/");
 		WebElement username = driver.findElement(By.id("user-name"));
 		WebElement password = driver.findElement(By.id("password"));
@@ -138,12 +138,11 @@ public class SwagLoginTest {
 
 		WebElement logoutElement = driver.findElement(By.xpath("//*[@id='logout_sidebar_link']"));
 		logoutElement.click();
-
-		System.out.println("##############################");
 	}
 
 	@After
 	public void tearDown() {
+		System.out.println("##############################");
 		driver.close();
 		driver.quit();
 	}
